@@ -1,14 +1,17 @@
 import "./EpenseItem.css";
+import ExpenseDate from "./ExpenseDate";
+import Card from "../UI/Card";
 
-function ExpenseItem() {
+function ExpenseItem({date}) {
+
     return (
-      <div className="expense-item">
-          <div>March 1st 2025</div>
+      <Card className="expense-item">
+          <ExpenseDate date={date} />
           <div className="expense-item__description">
               <h2>Car Insurance</h2>
               <div className="expense-item__price">$300</div>
           </div>
-      </div>
+      </Card>
     );
 }
 
